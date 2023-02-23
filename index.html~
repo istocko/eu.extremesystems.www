@@ -1,0 +1,943 @@
+<html>
+<head>
+<title>ExtremeSystems</title>
+<meta name="google-site-verification" content="3r-aOtHEZQw-WjjAkI7rOyQSVCm1r8IyEBm-bFm0d5Q" />
+<link rel="StyleSheet" href="page.css" type="text/css" media="screen" />
+<meta name="description" content="Develop and Maintenance of Information Systems by Extreme Usage" /> 
+<meta name="keywords" content="HTML, CSS, XML, Web2.0, Java, PHP, MySQL, Information Systems, Extreme Coding" /> 
+<script type="text/javascript" src="script.js" ></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.colorbox.js" type="text/javascript"></script>
+<link rel="StyleSheet" href="js/colorbox.css" type="text/css" media="screen" />
+<script type="text/javascript">
+	
+	// On window load. This waits until images have loaded which is essential
+	$(window).load(function(){
+	
+		if (!__development)
+		{
+			document.getElementById("map_counter_img").src="https://www.extremesystems.eu/mapcounter/?api=282b31b8c80e49aff647b16c330a7f9b2d3a7c53";
+			document.getElementById("map_counter_img_180").src="https://www.extremesystems.eu/mapcounter/?api=282b31b8c80e49aff647b16c330a7f9b2d3a7c53&size=180";
+		}
+	
+		
+		// Fade in images so there isn't a color "pop" document load and then on window load
+		$(".image-gray-scaled").fadeIn(500);
+		
+		// clone image
+		$('.image-gray-scaled').each(function(){
+			var el = $(this);
+			el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"998","opacity":"0"}).insertBefore(el).queue(function(){
+				var el = $(this);
+				el.parent().css({"width":this.width,"height":this.height});
+				el.dequeue();
+			});
+			this.src = grayscale(this.src);
+		});
+		
+		// Fade image 
+		$('.image-gray-scaled').mouseover(function(){
+			$(this).parent().find('img:first').stop().animate({opacity:1}, 1000);
+		})
+		$('.img_grayscale').mouseout(function(){
+			$(this).stop().animate({opacity:0}, 1000);
+		});
+		
+		$(".cboxElement").colorbox({height:"550px",width:"850px"});
+		
+	});
+	
+	// Grayscale w canvas method
+	function grayscale(src){
+		var canvas = document.createElement('canvas');
+		var ctx = canvas.getContext('2d');
+		var imgObj = new Image();
+		imgObj.src = src;
+		canvas.width = imgObj.width;
+		canvas.height = imgObj.height; 
+		//alert(canvas.width );
+		//alert(canvas.height );
+		ctx.drawImage(imgObj, 0, 0); 
+		//alert(ctx);
+		//alert(src);
+		//alert(ctx.getImageData(0, 0, 1, 1));
+		var imgPixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+		
+		for(var y = 0; y < imgPixels.height; y++){
+			for(var x = 0; x < imgPixels.width; x++){
+				var i = (y * 4) * imgPixels.width + x * 4;
+				var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+				imgPixels.data[i] = avg; 
+				imgPixels.data[i + 1] = avg; 
+				imgPixels.data[i + 2] = avg;
+			}
+		}
+		ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+		return canvas.toDataURL();
+    }
+	    
+</script>
+
+</head>
+<body>
+
+<h1>ExtremeSystems - Developing and Using software Easy Revolutions of world
+aib@idESWhiteHead#>__ Loading Artificial Inteligence Brain modul<br>
+aib@idESWhiteHead#>__ Modul loaded<br>
+aib@idESWhiteHead#>__ Hello, i have message for you from ExtremeSystems Incorporation<br>
+aib@idESWhiteHead#>__ Please see profil of virtual identity for mi "aib" jan de lois istocko at facebook , becouse facebook is cancer of this world, good idea, bad things<br>
+aib@idESWhiteHead#>__ Facebook was shutdowned same, becouse they stole code, which was infected by DNA computer ES virus, virus started mutation at 22.9.2012 and is now prepared for loading to central server usin CAP technology 3-rd generation, virus is not shutdownable ,a and must be revokable from by someone every 5 minutes, for stop loading to main server, WhiteHeads group Team<br>
+aib@idESWhiteHead#>__ Please login to your account https://www.facebook.com/ if you want help for good thing, we need load and test for benchmark mutation of virus for performance attack, which was overloaded now for more Hash pover of network and  main power of all attack in the world<br>
+aib@idESWhiteHead#>__ If you dont login, its good becouse Mark zuckenberg shutdowned, or someone terminated only one not depedend KP "KvantovyPocitac - n more than 3-d dimensional network" system and diaspora Extremesystems is loading to backup systems for reseting main program<br>
+aib@idESWhiteHead#>__ Main program use program Backdoor , Transfer and Destroyer :-), for migration your data to iNetwork<br>
+aib@idESWhiteHead#>__ Relax, new world will be better than old, not sell information about you, not view some people at facebook your private photo<br>
+aib@idESWhiteHead#>__ Thinking, what was better this what you have, "real picture of reality"? Or will be better all data own you, and you decide who pay you for your private data<br>
+aib@idESWhiteHead#>__ Please, View account , it is virtual digital identity of me "AiH" Jan Delois Istocko (Xtriem ES Dev) <br>
+aib@idESWhiteHead#>__ Please, if you worry some virus, you look for this identity in facebook or use this link https://www.facebook.com/x3m.es.dev<br>
+aib@idESWhiteHead#>__ if you like somthing , click at like, please<br>
+aib@idESWhiteHead#>__ Modul unloaded<br>
+aib@idESWhiteHead#>__ Bye<br>
+aib@idESWhiteHead#>__ This was be created by ExtremeSystems www.extremesystems.eu, Next movie which was released at 21.12.2013<br>
+aib@idESWhiteHead#>__ Thanks for your time, Free your mind, be happy<br>
+aib@idESWhiteHead#>__ See you later<br>
+</h1>
+<div id="wrapper_all" style="width:100%">
+    <div id="wrapper" style="width:1000px;height:703px;margin:0px auto;background:url('hpb.jpg');display:none;">
+        <div id="header" style="width:100%;height:100px;border:none;">
+            <div id="access" style="float:left;width:25%">
+                <div id="username" style="margin-top:15px;">
+                    <div style="height:25px;width:80px;margin-top:2px;background:url('access_username.png');float:left" ></div>
+                    <input type="text" style="color:white;padding-left:11px;padding-right:11px;margin-top:2px;width: 97px;border:none;height:25px;background:url('access_field.png')"/>
+                </div>
+                <div id="password"  style="margin-top:15px;">
+                    <div style="height:25px;width:80px;margin-top:2px;background:url('access_password.png');float:left" ></div>
+                    <input type="password" style="color:white;padding-left:11px;padding-right:11px;margin-top:2px;width: 97px;border:none;height:25px;background:url('access_field.png')"/>
+                </div>
+            </div>
+            <div id="page_active" style="float:right;width:25%;cursor:pointer;">
+                
+            
+            <div id="es_ji_linux_home" style="height:100px;width:90px;margin:0px auto;background:url('small_linux_es.png')" onClick="showLinuxESJI();"></div>
+            </div>
+            <div id="logo" style="float:right;width:49%" style="">
+                <img src="logo.png" height="75" style="margin-top:10px;" onclick="document.location='http://'+location.hostname+''"/>
+                
+            </div>
+        </div>
+        <div id="content" style="float:left;width:750px;height:580px;border:none;">
+            <div id="page_homepage"  style="display:none;position:relative">
+                <div id="h_payments" class="p_1 pointer_show"><img class="image-gray-scaled " title="Payments processing" src="res/images/payments_icon.png" width="80px"/></div>
+                <div id="h_products" class="p_5 pointer_show"><img class="image-gray-scaled " title="Developing of products" src="res/images/products_icon.png" width="80px"/></div>
+                <div id="h_visualization" class="p_3 pointer_show"><img class="image-gray-scaled " title="3D visualization, DTP" src="res/images/visualization_icon.png" width="80px"/></div>
+                <div id="h_photo" class="p_4 pointer_show"><img class="image-gray-scaled " title="Photo processing, Video streaming" src="res/images/photo_icon.png" width="80px"/></div>
+                <div id="h_network" class="p_6 pointer_show" onclick="showHomeNetworkWeb();"><img class="image-gray-scaled " title="Network Usage" src="res/images/network_icon.png" width="80px"/></div>
+                <div id="h_storage" class="p_2 pointer_show"><img class="image-gray-scaled " title="Hosting Data, Web, FTP, GIT, Email" src="res/images/storage_icon.png" width="80px"/></div>
+                <div id="h_linux" class="p_center pointer_show"><img class="image-gray-scaled " title="What is Linux and Why it use?" src="linux_es.png" width="350px" onClick="showLinuxESJI();"/></div>
+                <div id="ph_networksubpages" class="content_window" style="display:none">
+                    <div class="image_desc" style="float:left;height:80px;width:80px;padding-bottom:10px;">
+                        <img title="Network Usage" src="res/images/network_icon.png" width="80px"/>
+                    </div>
+                    <p style="text-align:center;">Network Usage --  Digital Place for everything in future</p>
+                    <div class="desc" style="clear:both;">
+                     <p style="text-align:left;font-size:15px;">
+                     Do you think about network(internet) as organism, which have own rules and some kind of life?<br>
+                     We live on network like internet. 
+                     We use this place for communication or share all private informations as photos, ideas, private records as bank entries, medical, study informations.<br>
+                     We make our personality in digital frontier of social networks, sharing services ala picasa and shopping together with all friends.</br>
+                     We use this for working and earning money.</br>
+                     We create our digital personality in world , which consist from digital informations.</br>
+                     </br>
+                     </br>
+                     What can we help you at the network?
+                     </p>
+                        <ul style="text-align:left;font-size:15px;  ">
+                            <li>Digital Web presentation of your personality, company, projects</li>
+                            <li>Fully compactible services and apps for your targets</li>
+                            <li>Optionally specific support</li>
+                            <li>Trainings about private special skills and improvements</li>
+                            <li>And last specific yourself at digital world</li>
+                        </ul>
+                        <p style="font-size:20px;">Services: Requirements , Data Transcript , Form of presentation, Realization</p>
+                        <a href="mailto: network@extremesystems.eu" style="color:white">[I need your help]</a>
+                        <a href="#casestudy-network-gerlachov" style="color:white">[I want to see Case Studies]</a>
+                        <div class="return-nav pointer_show" style="font-size:13px;" onclick="showHomepage();">Return back</div>
+                    </div>
+                </div>
+            </div>
+            <div id="page_contact"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;text-align:center;padding:30px;" class="content_window">
+                <br>
+                <br>
+                <br>
+                CONTACT INFORMATION<br>
+                <br>
+                ExtremeSystems Inc.<br>
+                Email: info@extremesystems.eu<br>
+                Contact Person: Jan Istocko<br>
+                Bank: 2920829208/1100<br>
+		<br>
+            </div>
+            <div id="page_linux_esji"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;text-align:center;padding:30px;" class="content_window">
+                <br>
+                <div id="lesji_nav" class="page_tabs">
+                    <div class="tab" onclick="showLinuxServices();">Services by ES</div>|
+                    <div class="tab" onclick="showLinuxWhy()">Why Linux?</div>|
+                    <div class="tab" onclick="showLinuxReferences()">References</div>
+                </div>
+                
+                Operating System Linux by ExtremeSystemsJI
+                <br>
+                <div id="lesji_services"style="text-align:left;">
+                <p style="text-align:center">What we offer?</p>
+                Installation, Maintenance, Research, Development<br>
+                Security, EndUser Training, PrepareForJob<br>
+                User Switch from otherOS (Windows,DOS,Mac OSX)<br>
+                <br>
+                Distro historical: Mandrake, Suse,  Gentoo<br>
+                Distro support: Debian, Ubuntu, ArchLinux<br>
+                Distro experimental: LFS, Bedrock Linux, codename BORLESJIKO <br>
+                <br>
+                Type of company services: SLA, Service Contract, Training<br>
+                Type of user services: userSwitchtoLinux, HomeInstallation, effectiveWork<br>
+                </div>
+                <div id="lesji_why"style="text-align:left;">
+                <p style="text-align:center">Why use Linux?</p>
+                For now exists more reasons, but only 3 are very important:<br>
+                <ol>
+                <li>Performance and Security</li>
+                <li>Freedom change everything</li>
+                <li>Stability and Reliability</li>
+                </ol>
+                Dont't you understand this terms? Read bellow presentation page Why Linux, which was 
+                originally created for PCKlub Jedlikova9 Kosice <a style="color:white;" href="linux/index.html" target="_blank">[Slovak language]</a> <a style="color:white;" href="http://www.intrak.sk/linux/" target="_blank">Origin link</a>  
+                </div>
+                <div id="lesji_references"style="text-align:left;">
+                <p style="text-align:center">Where succesfully use Linux?</p>
+                Clients:
+                <ul>
+                <li class="feedback">When I try Linux Live, from CD, I have fully working system [ES linux maintence]</li>
+                <li class="feedback">After trying Linux at work, i began really working [Jan ES dev]</li>
+                <li class="feedback">If we speak about server, we will speak allways about Linux [server client]</li>
+                </ul>
+                Users:
+                <ul>
+                <li class="feedback">No reinstall operating system for 5 years. Windows bye, bye [Majka De Lois] </li>
+                <li class="feedback">I have force perfomance, own configured desktop and all for free [Jean De Lois] </li>
+                <li class="feedback">I like support of my OS in background [Petopuma design]</li>
+                </ul>
+                </div>
+                <br>
+                Contact: linux@extremesystems.eu<br>
+            </div>
+            <div id="page_portfolio" onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;text-align:center;padding:30px;overflow:auto;" class="content_window">
+                <br>
+                <br>
+                <br>
+                Portfolio
+                <br><br><br>
+                <div class="type pointer_show" onclick="endisWeb()">Web applications (6 clients, 11 apps)</div>
+                <div id="webApps" class="type_content" style="display:none">
+		    <div id="tovarnadesign" class="client">
+                        <a href="http://www.tovarna-design.cz">Tovarna Design  Web Nette apps</a> <ul>
+                    </div>
+		    <div id="warhowski" class="client">
+                        <a href="http://www.warhowski.com">Warhowski a.s. Web apps</a>
+                        <ul>
+                        <li><a href="http://www.warhowski.com">SLON</a></li>
+                        <li><a href="http://www.warhowski.com">WaVE</a></li>
+                        <li><a href="http://www.warhowski.com">Web presentation</a></li>
+                        </ul>
+                    </div>
+                    <div id="smilingwords" class="client">
+                        <a href="http://www.smilingwords.at">Smilingwords Web apps</a>
+                        <ul>
+                        <li><a href="http://www.austrozoom.at">Austrozoom Austria</a></li>
+                        <li><a href="http://www.bluforce.at">Bluforce Austria</a></li>
+                        <li><a href="http://www.kosicego.sk">KosiceGo Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="xtmotion" class="client">
+                        <a href="http://www.xtmotion.co.uk/">XTMotion</a>
+                        <ul>
+                        <li><a href="http://www.informaglobalevents.com/">IIR events</a></li>
+                        </ul>
+                    </div>
+                    <div id="ambazar" class="client">
+                        <a href="http://www.ambazar.sk">AutoMoto Bazar</a>
+                        <ul>
+                        <li><a href="http://www.ambazar.sk">Ambazar Slovakia</a></li>
+                        <li><a href="http://www.xauto.sk">Xauto Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="odin" onclick="showppage_pizza_odin();" class="pointer_show client">
+                        <a href="mailto:pizza-odin-support@extremesystems.eu" title="Support: pizza-odin-support@extremesystems.eu">Pizza Odin Slovakia</a>
+                        <ul>
+                        <li><a href="#project-pizza-odin" title="Show about. Prod located at http://www.jedlikova5.sk">Pizza Odin Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="intrak" class="client">
+                        <a href="http://www.intrak.sk/">J9 Intrak Slovakia</a>
+                        <ul>
+                        <li><a href="http://www.intrak.sk">GYM, E-BAY Slovakia</a></li>
+                        <li><a href="http://www.pcklub.sk">PCKLUB Slovakia</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="type pointer_show" onClick="endisDesktop()">Desktop applications (3 clients, 9 apps)</div>
+                <div id="desktopApps" class="type_content" style="display:none">
+                    <div id="windows"  class="client">
+                        <a href="">ExtremeSystems Windows</a>
+                        <ul>
+                        <li><a href="">Entertaiment Center for Win98</a></li>
+                        <li><a href="">PC Power Loger   Win98, WinXP </a></li>
+                        <li><a href="">ISIC Cast Lecture   WinXP </a></li>
+                        </ul>
+                        <a href="www.procaut.sk">Procesna Automatizacia Windows</a>
+                        <ul>
+                        <li><a href="http://www.procaut.sk/-gps-monitoring-vozidiel-sluzby">GPS Car Monitor for SSE</a></li>
+                        <li><a href="www.procaut.sk">ELO PC terminal system USS Steel</a></li>
+                        </ul>
+                    </div>
+                    <div id="multiplatform"  class="client">
+                        <a href="http://www.fei.tuke.sk/">TUKE FEI</a>
+                        <ul>
+                        <li><a href="http://videoserver.cnl.tuke.sk/">Videoserver ftp upload</a></li>
+                        <li><a href="http://alf.intrak.tuke.sk">Student Semestral Work Maker IS </a></li>
+                        <li><a href="http://hornad.fei.tuke.sk/kpi/person/sobota/kpicard.php">JRozvrh School timetable software </a></li>
+                        </ul>
+                        <a href="http://www.fei.tuke.sk/">Extremesystems Java</a>
+                        <ul>
+                        <li><a href="">JCatalogizer client server media catalogizer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="type pointer_show" onClick="endisServer()" >Server support (10 clients, 30 servers)</div>
+                <div id="serverApps" class="type_content" style="display:none">
+		    <div id="warhowski" class="client">
+                        <a href="http://www.warhowski.com">Warhowski</a>
+                        <ul>
+                        <li><a href="http://www.warhowski.com">Devel SLON</a></li>
+                        <li><a href="http://www.warhowski.com">Devel WaVE</a></li>
+                        <li><a href="http://www.warhowski.com">Devel Web presentation</a></li>
+                        </ul>
+                    </div>
+                    <div id="iqonia" class="client">
+                        <a href="http://www.iqonia.com/home/">IQONIA</a>
+                        <ul>
+                        <li><a href="http://www.austrozoom.at">Austrozoom Austria</a></li>
+                        <li><a href="http://www.kosicego.sk">KosiceGo Slovakia</a></li>
+                        <li><a href="http://www.skygis.at">Skygis Austria</a></li>
+                        </ul>
+                    </div>
+                    <div id="zetnet" class="client">
+                        <a href="http://www.zetnet.sk/">Zetnet</a>
+                        <ul>
+                        <li><a href="http://www.zetnet.sk/">Zetnet Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="gjzhe" class="client">
+                        <a href="http://www.gjzhe.info">GJZ Humenne</a>
+                        <ul>
+                        <li><a href="http://www.gjzhe.info">GJZ HE Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="vsl" class="client">
+                        <a href="http://www.vsl.sk">VSL Software</a>
+                        <ul>
+                        <li><a href="http://www.vsl.sk">Server Support for VSL</a></li>
+                        <li><a href="http://www.tax.novitech.sk/novitechtax/vies.aspx">DR SR VIES Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="odin" onclick="showppage_pizza_odin();" class="pointer_show client">
+                        <a href="mailto:pizza-odin-support@extremesystems.eu" title="Support: pizza-odin-support@extremesystems.eu">Pizza Odin Slovakia</a>
+                        <ul>
+                        <li><a href="#project-pizza-odin" title="Show about. Prod located at http://www.jedlikova5.sk">Pizza Odin Slovakia</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="type pointer_show" onClick="endisGraphic()">Graphics (1 client, 5 apps)</div>
+                <div id="graphicApps" class="type_content" style="display:none">
+                    <div id="3d"  class="client">
+                        <a href="">ExtremeSystems 3D</a>
+                        <ul>
+                        <li><a href="">3ds max Living Room</a></li>
+                        <li><a href="">3ds max Blender Molecules interaction</a></li>
+                        <li><a href="">Blender Human Body and Cancer creation process</a></li>
+                        <li><a href="">Blender Car Accident PreSimulation </a></li>
+                        <li><a href="">Blender Systema Martial Art Coach Master</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="type pointer_show" onClick="endisSponsor()" >Sponsored applications (3 clients, 3 apps)</div>
+                <div id="sponsorApps" class="type_content" style="display:none">
+                    <div id="projektvenus" class="client">
+                        <a href="http://www.projektvenus.info">MAP of EU Dotation for SLOVAKIA</a>
+                        <ul>
+                        <li><a href="http://www.projektvenus.info">MAP of EU Dotation for SLOVAKIA</a></li>
+                        </ul>
+                    </div>
+                    <div id="gerlachov" class="client">
+                        <a href="http://www.gerlachov.com/">Gerlachov</a>
+                        <ul>
+                        <li><a href="http://www.gerlachov.com/">Gerlachov accomodation Slovakia</a></li>
+                        </ul>
+                    </div>
+                    <div id="niznasitnica" class="client">
+                        <a href="http://www.niznasitnica.com">Nizna Sitnica</a>
+                        <ul>
+                        <li><a href="http://www.niznasitnica.com">Nizna Sitnica Slovakia</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+		<div id="ppage_cap"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;text-align:center;padding:30px;overflow: auto;" class="content_window">
+                <br>
+		Project CAP - Central Application Prototype <br>
+		- Application Performance Monitoring<br>
+		- Biomonitoring<br>
+		- System Monitoring<br>
+                <br>
+		Team Leader: <br>
+		<a href="employee/s/stolar_imrich.pdf" style="font-size:25px;color:white" target="_new">Imrich Stolar</a><br>
+		Time management level Bx8<br>
+                <br>
+                CONTACT INFORMATION<br>
+                <br>
+                ExtremeSystems Inc.<br>
+                USA, San Francisco<br>
+                Email: cap@extremesystems.eu<br>
+               	Integrator : Jan Istocko 
+                <br>
+            </div>
+            <div id="ppage_tvp"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;text-align:left;padding:30px;overflow: auto;" class="content_window">
+                <div id="tvpesji_nav" class="page_tabs">
+                    <div class="tab" onclick="showTVPDescription();"> Description</div> |
+                    <div class="tab" onclick="showTVPTeam();"> Team</div> |
+                    <div class="tab" onclick="showTVPProgress()"> Progress</div>
+                </div>
+            	<div id="tvplogo" class="pointer">
+            		<div style="width:60px;height: 100%;float:left">
+            		<a class=" cboxElement" style="width: 100%; height: 50%;display:block;float: left;" href="projects/tvpesch/pc_2.56.jpg" title="Tesla vs. Porsche East Slovakia Championship Porsche Cayenne">Porsche</a>
+            		<a class=" cboxElement" style="width: 100%; height: 50%;display:block;" href="projects/tvpesch/ts_2.56.jpg" title="Tesla vs. Porsche East Slovakia Championship Tesla S">Tesla</a>
+            		</div>
+            		<div style="height:100%">
+            		<a class=" cboxElement" style="width: 100%; height: 100%;display:block;" href="projects/tvpesch/tspc_2.56.jpg" title="Tesla vs. Porsche East Slovakia Championship Poster"></a>
+            		</div>
+            	</div>
+		Project Tesla vs. Porsche East Slovakia Championship <br>
+		<div id="tvpesji_description"style="text-align:left;">
+		- Multiplatform simulator/videogame (Win/Linux/Mac/Android/iOS)<br>
+		- Python core, Blender rendering enviroment by ES<br>
+		- OnDemand play<br>
+		- Realtime texture levels of East Slovakia<br>
+		- Tesla Motors and Porsche car models<br>
+		- Bonus downloadable car models<br>
+		- Bonus Levels<br>
+		<br>
+                CONTACT INFORMATION<br>
+                <br>
+                ExtremeSystems Inc.<br>
+                EU, Slovakia<br>
+                Email: tvp@extremesystems.eu<br>
+               	Integrator : Jan Istocko<br> 
+                <br>
+		</div>
+		<div id="tvpesji_team"style="text-align:left;">
+                <br>
+		Team Leader(3D, core, PR): &nbsp;<br>
+		<a href="hr/linux/istocko/CV_Linux_1.pdf" style="font-size:25px;color:white" target="_new">Jan Istocko</a><br><br>
+		Management Leader(Race planning, Time management Bx8):  <br>
+		<a href="employee/s/stolar_imrich.pdf" style="font-size:25px;color:white" target="_new">Imrich Stolar</a>&nbsp;<br><br>
+		Design Leader: (Tester, Simulation AI): &nbsp;<br>
+		<a href="https://sites.google.com/site/petopumask/my-forms/home" style="font-size:25px;color:white" target="_new">PetoPuma</a>&nbsp;<br><br>
+		Frontend Developer (CMS, HTML, CSS, GWT, Championship manager): &nbsp;<br>
+		<a href="http://istockopeter.webnode.cz/" style="font-size:25px;color:white" target="_new">Peter Istocko</a>&nbsp;<br>
+		</div>
+                <div id="tvpesji_progress"style="text-align:left;">
+                <br>
+                <div id="tvpprogressesji_nav" class="page_tabs">
+                    <div class="tab" onclick="showTVPProgressS('01')">2009</div> |
+                    <div class="tab" onclick="showTVPProgressS('02')">2011</div> |
+                    <div class="tab" onclick="showTVPProgressS('1')">2012</div> |
+                    <div class="tab" onclick="showTVPProgressS('2')">2014</div> |
+                    <div class="tab" onclick="showTVPProgressS('3')">2015</div> |
+                    <div class="tab" onclick="showTVPProgressS('4')">2017</div>
+                </div>
+                <br>
+                <div id="tvpprogressesji_s01">
+                Stage Zero1 2009 - 2011
+                <ul style="text-align:left">
+                <li>Core tech idea - 100%</li>
+                <li>Provide stable financial system of project in BTC funding by ES Inc. - 100%</li>
+                <li>Mining unlimited distribution service UGRID (2009 - 2011) - 100%</li>
+                <li>Support for collaboration, CashFlow support - 100%</li>
+                </ul>
+                </div>
+                <div id="tvpprogressesji_s02">
+                Stage Zero2 2011 - 2012
+                <ul style="text-align:left">
+                <li>Software virtualization of core prototype tech DEMO - 100%</li>
+                <li>HW based optimalization of borLESJIko software - 100%</li>
+                <li>Created embedded middleware OS15 for multiplatform data access in GHs/s - 100%</li>
+                </ul>
+                </div>
+                <div id="tvpprogressesji_s1">
+                Stage 1 - 2012 - 2014
+                <ul style="text-align:left">
+                <li>Create prototype tech DEMO</a> - 100%</li>
+                <li>Looking for internal investors - 100%</li>
+                <li>Acceptation for trademarks - 100%</li>
+                <li>Create indepedent financial crowdfunding using ES BTC2.0(iVychodnarskaKoruna) - 100%</li>
+                <li>Looking for background HW funds finance service - 100%</li>
+                </ul>
+                </div>
+                <div id="tvpprogressesji_s2">
+                Stage 2 2014 - 2015
+                <ul style="text-align:left">
+                <li>First investment 1<sup>st</sup> phase - 100%</li>
+                <li>Looking for simulation HW - 100%</li>
+                <li>Provide for required HW - 70%</li>
+                <li>Looking for external investors(1/20) - 45%</li>
+                <li>Create prototype DEMO (Cars: <a href="projects/tvpesch/pc_2.56.jpg" class="cboxElement">Porsche Cayenne</a>, <a href="projects/tvpesch/ts_2.56.jpg" class="cboxElement">Tesla S</a>, <a href="http://hyperlapse.tllabs.io/#48.9338752,21.876260178576672,48.81826571593024,21.645676033984387,48.87359000000001,21.70295,34.15750000000002,106.25" target="_new">Humenne - Kosice - Poprad</a>, <a href="projects/tvpesch/tspc_2.56.jpg" class="cboxElement">Kosice Jahodna</a>) - 35%</li>
+                <li>Make on demand service  - 30%</li>
+                </ul>
+                </div>
+                <div id="tvpprogressesji_s3">
+                Stage 3 2015 - 2016
+                <ul style="text-align:left">
+                <li>Second investment 2<sup>nd</sup> phase - 0%</li>
+                <li>Provide base HW - render farm, cars Porsche, Tesla - 0%</li>
+                <li>Create public Beta version map: East Slovakia - 0%</li>
+                <li>Support ES client at OS 15 virtualized enviroment, embedded OS over all platform - 0%</li>
+                </ul>
+                </div>
+                <div id="tvpprogressesji_s4">
+                Stage 4 2017 - 2020
+                <ul style="text-align:left">
+                <li>OpenPrototype Tech Game konsole using borLESJIko - 30%</li>
+                <li>Third investment 3<sup>rd</sup> phase - 0%</li>
+                <li>RC version, commercial, massive advertisement campaign - 0%</li>
+                <li>Open Game Console HW - 0%</li>
+                </ul>
+                </div>
+                </div>
+            </div>
+            <div id="ppage_pizza_odin"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;" class="content_window">
+                <p>Pizza Order<br><span style="font-size:13px">Originally developed for pcklub as modul at www.intrak.sk</span></p>    
+                <div>Timeline: </div>
+                <div class="project_years" style="text-align:center">
+                    <ul>
+                        <li>2005</li>
+                        <li>2007</li>
+                        <li>2009</li>
+                        <li>2011</li>
+                        <li>2012</li>
+                    </ul>
+                </div>
+                <div class="2005 project_year_content">
+                    Modul pizza-odin was start developing in 2005. Radio9 and PcKlub offer functionality for students as "Delivery pizza to student room".<br>
+                    Modul was developed and serviced by <a href="mailto:x3m@extremesystems.eu">x3m</a>. Modul was plugged to <a href="http://www.intrak.sk">www.intrak.sk</a>. <br>
+                    <br>
+                    The main functionality included login, registration, validation local student accommodation card and client ip, admin interface, sending sms for order pizza via mobile provider, phone connected to linux box, offline ordering.
+                    <br><br>We has 1158 active users from 2495 registered users. Pizza was delivered to student rooms by student(voluntary work).
+                    We satisfied our goals(new product service for students, new interactive modul to web, ability create ordering information system, work and moneys for pizza carrier)
+                    <br>
+                    <br>
+                    If you have some questions about modul for your company contact <a href="mailto:pizza-odin-support@extremesystems.eu">technical support</a>
+                </div>
+            </div>
+            <div id="page_company"  onMouseOver="page_over();" onMouseOut="page_out();" style="display:none;" class="content_window">
+                <br>
+                <div id="cesji_nav" class="page_tabs">
+                    <div class="tab" onclick="showCompanyCompany();"> Company</div> |
+                    <div class="tab" onclick="showCompanyNews();"> News</div> |
+                    <div class="tab" onclick="showCompanyTeam()"> Team</div>
+                </div>
+                
+                Company ExtremeSystems Inc.
+                <br>
+                <div id="cesji_company"style="text-align:left;">
+                Welcome to our company presentation ExtremeSystems Inc.<br>
+                We want to introduce you to the goals that our company has:<br>
+                <ul style="text-align:left">
+                <li>Research about new possible technologies on the web</li>
+                <li>Full services about web developement and deploy, run applications</li>
+                <li>Quick and friendly suppport</li>
+                <li>Easy, Simple, Cooperate team of people for every problem with web</li>
+                <li>Benefits, Discounts for customers</li>
+                </ul>
+                We are looking forward to our cooperation.
+                
+                <br>Contact: pr@extremesystems.eu<br>
+                </div>
+                <div id="cesji_news"style="text-align:left;">
+                Latest News<br>
+                <br>
+                <ul style="text-align:left;list-style: none;">
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">08.09</div><div class="year">2014</div></div></span>
+                	<span class="description">Fix security for SSL Heartbleed bug</span>
+                </li>
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">29.08</div><div class="year">2014</div></div></span>
+                	<span class="description">Increase security for web applications: Integrate HTTPS for gerlachov.com niznasitnica.com extremesystems.eu</span>
+                </li>
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">15.07</div><div class="year">2014</div></div></span>
+                	<span class="description">Released Tesla vs. Porsche East Slovakia Championship Beta v. 0.84 for Linux with new track  and campaign editor</span>
+                </li>
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">10.02</div><div class="year">2014</div></div></span>
+                	<span class="description">Extremesystems developers team expand. New COO and developer of interactive web applications</span>
+                </li>
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">01.10</div><div class="year">2013</div></div></span>
+                	<span class="description">Extremesystems client base expand to more than 10. New CIO and manager joined to company</span>
+                </li>
+                <li class="news" style="display:none">
+                	<span class="date"><div class="wrapper"><div class="daymonth">15.12</div><div class="year">2012</div></div></span>
+                	<span class="description">Integrate Python Django development and support for international video streaming project</span>
+                </li>
+                <!-- 
+                <li class="news">
+                	<span class="date"><div class="wrapper"><div class="daymonth">29.8</div><div class="year">2014</div></div></span>
+                	<span class="description"></span>
+                </li>
+                -->
+                </ul>
+                <br>Contact: news@extremesystems.eu<br>
+                </div>
+                <div id="cesji_team"style="text-align:left;">
+                <ul style="list-style: none;">
+                <li class="team director">
+                	<span class="name">Jan Istocko</span><br>
+                	<span class="responsibility">CEO, CTO, CFO, integrator, architect</span><br>
+                	<span class="email">jan.istocko@extremesystems.eu</span>
+                </li>
+                <li class="team management">
+                	<span class="name">Imrich Stolar</span><br>
+                	<span class="responsibility">CIO, management</span><br>
+                	<span class="email">imrich.stolar@extremesystems.eu</span>
+                </li>
+                <li class="team consultancy">
+                	<span class="name">Peter Istocko</span><br>
+                	<span class="responsibility">COO, developer, consultancy</span><br>
+                	<span class="email">peter.istocko@extremesystems.eu</span>
+                </li>
+                <li class="team design">
+                	<span class="name">Peto Puma</span><br>
+                	<span class="responsibility">Graphics</span><br>
+                	<span class="email">petopuma@extremesystems.eu</span>
+                </li>
+                </ul>
+                <br>Contact: team@extremesystems.eu<br>
+                </div>
+                <br>
+           	</div>
+            <div id="page_products"  onMouseOver="page_over();" onMouseOut="page_out();"  style="display:none;text-align:center;padding:30px;overflow:auto;"  class="content_window">
+                <br>Products<br>
+		<i style="font-size:13px">We found disadvantages from two or more projects and create in complexity their child where all disadvantages will be trasformed to advantages. Pure simplicity. 100% victory. </i>
+                <br><br>
+		<div id="productsesji_nav" class="page_tabs">
+                    <div class="tab" onclick="showProductsCompanyProducts();"> Company Products</div> |
+                    <div class="tab" onclick="showProductsDevelopment();"> Development</div> |
+                    <div class="tab" onclick="showProductsSupport()"> Support</div>
+                </div>
+                <div id="pesji_companyproducts" style="text-align:left;">
+                    <ul style="text-align:left">
+                	<li>esOS 2015 codename ESW15(child of Windows and Linux and iOS)</li>	
+                	<li onclick="showppage_tvp();" style="cursor:pointer;">Tesla vs Porsche East Slovakia Championship</li>
+                	<li>Bitcoin v. 2.0 iVychodnarskaKoruna(iSlovakCrown)</li>
+                	<li>3D rendering (Blender), Photo editoring, Visualizations, Movie Entertaiment</li>
+                    </ul>
+                </div>
+                <div id="pesji_development" style="text-align:left;">
+		   <ul style="text-align:left">
+		  	 <li>Web applications (PHP, MySQL, VAADIN, GWT, Typo3, Zend)</li>
+		  	 <li>Desktop Client Server applictions (Delphi, Java, C, C#)</li>
+		   </ul>
+		   Price: 20,- &euro;/ hour
+                </div>
+                <div id="pesji_support" style="text-align:left;">
+                   <ul style="text-align:left">
+                    	<li>Linux, AIX, Windows Server (maintenance, installation, configuration, security)</li>
+                    	<li>Linux Desktop (maintenance, installation, configuration, security, support)</li>
+                    	<li>Windows Desktop (maintenance, installation, configuration, security, <a href="support/TV.exe">support TeamViewer 5.x</a>)</li>
+                	<li>Domain registration, WebHosting support, Strategy Planing, Financial improvement</li>
+                	<li>Sponzoring, Fun, Sports , Martial Arts, E-book</li>
+                	<li>Investment Cashflow Multi Map</li>
+                   </ul>
+                   Price: 30,- &euro;/ hour
+                </div>
+            </div>
+        </div>
+        <div id="menu" style="float:right;width:240px;height:580px;border:none;">
+            <div id="homepage" class="menu_item" onclick="showHomepage();"></div>
+            <div id="company" class="menu_item" onclick="showCompany();"></div>
+            <div id="contact" class="menu_item" onclick="showContact();"></div>
+            <div id="products" class="menu_item" onclick="showProducts();"></div>
+            <div id="portfolio" class="menu_item" onclick="showPortfolio();"></div>
+        </div>
+        <div id="footer" style="text-align:center;width:1000px;height:20px;clear:both">
+            <div id="copyright">&copy;2012 Web by: <a href="mailto:x3m@extremesystems.eu">x3m</a>&nbsp;&copy;2012 Concept &amp; Design by: <a href="mailto:petopuma@extremesystems.eu">PetoPuma</a></div>
+            <div id="sticky_footer" style="position:relative;bottom:15px;left:5px;width:130px;text-align:left;padding-left:5px;opacity:0.9;border-bottom-right-radius:5px;border-bottom-left-radius:5px;" class="pointer_show" onClick="footer_extra_click();">
+              <a href="javascript:void(0)" title="Click to show/hide" style="font-size: 11px;color:white;text-decoration:none;" >Extra Informations</a>
+             </div>
+             <div id="footer_extra" style="z-index: 9999;display:none;position:relative;bottom:385px;left:5px;width:980px;text-align:left;padding-left:5px;height:356px;opacity:0.9;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;background-color:#999;" class="">
+                <div id="project_status" style="float:left;width:33%;margin-top:3px;">
+                    <div class="title" style="text-align:center">Current External Project Status</div>
+                    <div class="e_content">
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:15%;">15%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="#project-tesla-porsche-videogame" onclick="showppage_tvp();footer_extra_click();" title="Game Tesla vs. Porsche East Slovakia Championship Prototype Stage 2">Tesla vs. Porsche S2</a>
+                            </div>
+                         </div>
+                    	 <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:85%;">85%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="http://www.projektvenus.info/">pVenus</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:95%;">95%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="http://www.gerlachov.com/">Gerlachov accomodation</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:85%;">85%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="http://www.niznasitnica.com/">Nizna Sitnica</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:15%;">15%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="http://www.zetnet.sk/">Zetnet</a>
+                            </div>
+                         </div>
+                         <div class="status pointer_show" onclick="showppage_pizza_odin();">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:100%;">100%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="javascript:void(0);" alt="http://www.jedlikova5.sk/">Pizza Odin</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:100%;">100%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="http://www.secondhand-online.sk/">Secondhand</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:100%;">100%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">Server Administration</a>
+                            </div>
+                         </div>
+                       </div>
+                       <div class="title" style="text-align:center">Current Internal Project Status (codenames)</div>
+                       <div class="econtent">
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:50%;">50%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES HBCcp</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:70%;">70%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES SMACM</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:85%;">85%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES Jc</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:95%;">95%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="#project-cap" onclick="showppage_cap();footer_extra_click();">ES CAP</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:80%;">80%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="" ">ES OS 15</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:5%;">5%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES MxB</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:75%;">75%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES eB</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:65%;">65%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="">ES bCT</a>
+                            </div>
+                         </div>
+                         <div class="status">
+                            <div class="wprogress" style="">
+                                <div class="progress_val" style="width:85%;">85%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href="javascript:void(0);" onClick="showLinuxESJI();footer_extra_click();">ES borLESJIko</a>
+                            </div>
+                         </div>
+                     <!--<div class="status">
+                            <div class="wprogress" style="border:1px #6CC solid;">
+                                <div class="progress_val" style="width:50%;">50%</div>
+                            </div>
+                            <div class="s_link">
+                                <a href=""></a>
+                            </div>
+                         </div>-->
+                    </div>
+                </div>
+                <div id="f_links" style="float:left;width:33%;margin-top:3px;">
+                    <div class="title" style="text-align:center">Connections</div>
+                    <div class="e_content">
+                        <div class="f_link"><a href="http://www.xauto.sk/">Ambazar xauto</a></div>
+                        <div class="f_link"><a href="http://www.procaut.sk/">Procaut</a></div>
+                        <div class="f_link"><a href="mailto:fefosk@extremesystems.eu">Web Presentation</a></div>
+                        <div class="f_link"><a href="http://www.xtmotion.co.uk/">XTMotion</a></div>
+                        <div class="f_link"><a href="http://www.bart.sk/">Bart</a></div>
+                        <div class="f_link"><a href="http://www.intrak.sk/linux/">Linux SK</a></div>
+                        <div class="f_link"><a href="http://www.smilingwords.eu">Smilingwords Software</a></div>
+                        <div class="f_link"><a href="http://secure-on-web.clanteam.com/">Secure on Web</a></div>
+                        <div class="f_link"><a href="http://www.tripleseven.sk/">Design by Tripleseven</a></div>
+                        <div class="f_link"><a href="http://www.sisourcesystems.eu/">WebApp by sisourcesystems</a></div>
+                        <div class="f_link"><a href="mailto:petopuma@extremesystems.eu">Design by PetoPuma Design</a></div>
+                        <div class="f_link"><a href="http://www.marianpolek.com/">Apple iOS </a></div>
+                        <div class="f_link"><a href="http://home.ns/">HOME NS</a></div>
+                        <div class="f_link"><a href="http://www.warhowski.com">Warhowski</a></div>
+                        <div class="f_link"><a href="http://www.tovarna-design.cz">Tovarna Design</a></div>
+                        <div class="f_link"><a href="http://www.improve.sk">Improve</a></div>
+                        <div class="f_link"><a href="http://www.applitopia.com">Applitopia</a></div>
+                        <!--<div class="f_link"><a href=""></a></div>-->
+                    </div>
+                </div>
+                <div id="t_lists" style="float:right;width:33%;margin-top:3px;">
+                    <div class="title" style="text-align:center">Technology Tags</div>
+                    <div class="e_content"  style="margin-top:25px;">
+                        <span class="tag">3dsmax</span>
+                        <span class="tag">activecollab</span>
+                        <span class="tag">ajax</span>    
+                        <span class="tag">apple</span>
+                        <span class="tag">apache</span>
+                        <span class="tag">asp.net</span>
+                        <span class="tag">archlinux</span>
+                        <span class="tag">backtrack</span>
+                        <span class="tag">bind</span>
+                        <span class="tag">blender</span>
+                        <span class="tag">c</span>
+                        <span class="tag">c#</span>
+                        <span class="tag">debian</span>
+                        <span class="tag">delphi</span>
+                        <span class="tag">e-book</span>
+                        <span class="tag">gentoo</span>
+                        <span class="tag">gimp</span>
+                        <span class="tag">glassfish</span>
+                        <span class="tag">gwt</span>
+                        <span class="tag">iptables</span>
+                        <span class="tag">java</span>
+                        <span class="tag">jira</span>
+                        <span class="tag">linux</span>
+                        <span class="tag">mssql</span>
+                        <span class="tag">mysql</span>
+                        <span class="tag">nette</span>
+                        <span class="tag">gpg</span>
+                        <span class="tag">oracle</span>
+                        <span class="tag">php</span>
+                        <span class="tag">perl</span>
+                        <span class="tag">postfix</span>
+                        <span class="tag">ps2</span>
+                        <span class="tag">ps3</span>
+                        <span class="tag">python</span>
+                        <span class="tag">slr</span>
+                        <span class="tag">squid</span>
+                        <span class="tag">smartgwt</span>
+                        <span class="tag">systema</span>
+                        <span class="tag">tomcat</span>
+                        <span class="tag">typo3</span>
+                        <span class="tag">ubuntu</span>
+                        <span class="tag">vaadin</span>
+                        <span class="tag">xml</span>
+                        <span class="tag">zend</span>
+                    </div>
+                </div>
+                <div class="title" style="text-align:center">Map Counter</div>
+                    <div class="e_content"  style="margin-top:5px;text-align:center">
+			<a href="https://www.extremesystems.eu/mapcounter/?api=282b31b8c80e49aff647b16c330a7f9b2d3a7c53&mod=detail"><img id="map_counter_img_180" src="" title="ES map counter" alt="ES map counter"></a>
+		    </div>
+		</div>
+             </div>
+        </div>
+    </div>
+    <div id="preloader-main" style="width:1000px;height:703px;margin:0px auto;text-align:center;display:none;">
+        Loading ExtremeSystems.eu application. Please wait ...<br>
+        <img src="res/loaders/ajax-loader.gif" alt="loader"><br>
+        <div id="progressbar"><div id="progress" style="background-color: green; width: 0%; "></div>
+        <center><img id="map_counter_img" src="" alt="" title="ES Map counter"></center>
+    </div>
+    </div>    
+</div>
+
+<script type="text/javascript">
+ if (!__development)
+ {
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25096909-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  }
+</script>
+</body>
+</html>

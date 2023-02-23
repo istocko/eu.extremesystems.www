@@ -1,0 +1,347 @@
+h1, h2, h3 
+{
+    display:none;   
+}
+.menu_item
+{
+    //border: 1px red solid;
+    height: 48px;
+    width: 201px;
+    margin-top:60px;
+    //margin-bottom:30px;
+}
+#homepage.menu_item
+{
+   background:url('homepage.png'); 
+}
+#company.menu_item
+{
+   background:url('company.png'); 
+}
+#contact.menu_item
+{
+   background:url('contact.png'); 
+}
+#portfolio.menu_item
+{
+   background:url('portfolio.png'); 
+}
+#products.menu_item
+{
+   background:url('products.png'); 
+}
+
+
+#footer
+{
+    font-size:11px;
+    color: white;
+    font-weight: bold;
+}
+.p_center, .p_1, .p_2, .p_3, .p_4, .p_5, .p_6
+{
+       position: absolute;
+}
+.p_center
+{
+    top:133px;
+    left:200px;
+}
+.p_1
+{
+    top:52px;
+    left:124px;
+}
+.p_2
+{
+    top:248px;
+    left:60px;
+}
+.p_3
+{
+    top:450px;
+    left:120px;
+}
+.p_4
+{
+    top:450px;
+    left:550px;
+}
+.p_5
+{
+    top:248px;
+    left:600px;
+}
+.p_6
+{
+    top:52px;
+    left:538px;
+}
+
+#content
+{
+    color:LawnGreen;
+    font-weight: normal;
+    font-size: 24px;
+    font-family: fantasy;
+}
+
+.content_window
+{
+    text-align:center;
+    padding:30px;
+    background-color:#232033;
+    opacity:0.7;
+    border:1px #328A3C solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius:10px;
+    height:513px;
+    overflow: auto;
+}
+
+
+.f_link a , .status .s_link  a
+{
+ color:black;
+ cursor: pointer;
+ text-decoration:none;
+}
+
+.status .wprogress{
+ float:left;
+ width:50px;
+ height:15px;
+ margin-top:1px;
+ margin-right:3px;
+ overflow:hidden;
+ border:1px #6CC solid;
+}
+
+.status .progress_val 
+{
+    background-color:#6CC;
+    height:15px;
+    //margin-top:5px;
+    text-align:right;
+    //padding-left:2px;
+    clear:both;
+    max-width:100%;
+    
+        
+}
+
+#t_lists span.tag
+{
+    padding-left:40px;
+    color: black;
+    cursor: pointer;
+}
+
+#t_lists span.tag:hover
+{
+    padding-left:40px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+
+
+.page_tabs {
+    text-align:center;
+    color: white;
+    font-size:16px;
+    font-weight:normal;
+}
+
+.page_tabs .tab{
+    cursor: pointer;
+    display:inline;
+    margin-left:2px;
+    margin-right:2px;
+}
+
+.feedback
+{
+ font-family: cursive;   
+ font-size:15px;
+ font-weight: bold;
+}
+
+#ph_networkweb {
+    
+}
+
+#preloader {
+    display:none;   
+}
+
+div#preloader-main #progressbar
+{
+    width: 500px;
+    position:relative;
+    top: 50px;
+    margin: 0px auto;
+    border: 1px blue solid;
+    text-align: left;
+    height: 10px;
+}
+
+div#preloader-main #progressbar #progress
+{
+    background-color: blue;
+    width: 50%;
+    height: 100%;
+}
+
+//.footer_hover {
+//   background-color: none;    
+//}
+
+//.footer_hover:hover, 
+.footer_extra_background {
+   background-color: #999;    
+}
+
+.pointer_show
+{
+    cursor: pointer;
+}
+
+a
+{
+   color:LawnGreen; 
+   font-size: 15px;   
+}
+
+#page_portfolio {
+       
+}
+
+#page_portfolio .type {
+      // text-align: left;
+      clear:both;
+}
+
+
+#page_portfolio .type_content .client > a{
+      // text-align: left;
+      //float: left;
+      //position: absolute;
+      //left: 10px;
+      width: 100%;
+      display: block;
+      text-align: left;
+}
+
+#page_portfolio .type_content .client > ul{
+      // text-align: left;
+      list-style:none;
+      margin-top: 0px;
+      margin-bottom: 3px;
+      margin-left: 0px;
+}
+
+#page_portfolio .type_content .client > ul > li{
+    display:inline;
+}
+
+.project_years {
+    text-align: center;   
+}
+.project_years > ul{
+    list-style: none;   
+}
+
+.project_years > ul > li{
+   display:inline;
+   padding-left: 5px;
+   padding-right: 5px;
+   cursor: pointer;
+   
+}
+
+.project_year_content {
+ font-size: 15px; 
+ text-align: left;   
+}
+
+.team
+{
+	margin-top: 5px;
+}
+
+.team .name
+{
+	font-weight: bold;
+}
+
+.team .responsibility
+{
+	font-style: italic;
+	font-size: 13px;
+	margin-left: 30px;
+}
+
+.team .email
+{
+	font-size: 12px;
+	text-decoration: underline;
+	margin-left: 30px;
+}
+
+.news
+{
+	clear: both;
+	margin-top: 5px;
+}
+
+.news .date
+{
+	font-size: 11px;
+	float: left;
+	margin-right: 5px;
+	width: 100px;
+}
+
+.news .date .daymonth
+{
+	border: 1px white solid;
+	color: white;
+	background-color: grey;
+	font-weight: bold;
+	font-size: 25px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.news .date .year
+{
+	border: 1px white solid;
+	color: black;
+	background-color: white;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+.news .date .wrapper
+{
+	border: 1px grey solid;
+	display: inline-block;
+	width: 100%;
+}
+
+.news .description
+{
+	font-size: 14px;
+}
+
+#tvplogo {
+	height: 32px;
+	width: 152px;
+	background-image:url('projects/tvpesch/logo.png');
+	margin: 0px auto;	
+}
+
